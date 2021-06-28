@@ -3,11 +3,6 @@
 
 /******************************
 
-COLOR PALETTE
-
-
-
-
 [Table of Contents]
 
 1. Fonts
@@ -23,11 +18,14 @@ COLOR PALETTE
 5. Home
 7. Page Section
 8. Buttons
-9. Popular
-10. Footer
-	10.1 Newsletter
-	10.2 Footer Content
-	10.3 Footer Copyright
+9. News
+	9.1 Comments
+	9.2 Leave Comment
+10. Sidebar
+11. Footer
+	11.1 Newsletter
+	11.2 Footer Content
+	11.3 Footer Copyright
 
 
 ******************************/
@@ -281,7 +279,7 @@ section
 	transform: translateX(-50%);
 	width: 1318px;
 	height: 104px;
-	background: #0C2A6B;
+	background: #FFFFFF;
 	z-index: 10;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -364,7 +362,7 @@ section
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #FFFFFF;
+	color: #3a3a3a;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -373,7 +371,7 @@ section
 }
 .main_nav_item a:hover
 {
-	color: #FFB606;
+	color: #ffb606;
 }
 
 /*********************************
@@ -440,7 +438,7 @@ section
 	right: -50vw;
 	width: 50vw;
 	height: 100vh;
-	background: #0C2A6B;
+	background: #FFFFFF;
 	z-index: 12;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
@@ -455,7 +453,6 @@ section
 	visibility: visible;
 	opacity: 1;
 	right: 0;
-	background:white;
 }
 .menu
 {
@@ -578,7 +575,11 @@ section
 .menu_social_item
 {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 27px;
+}
+.menu_social_item:last-child
+{
+	margin-right: 0px;
 }
 .menu_social_item a i
 {
@@ -675,13 +676,8 @@ section
 	font-weight: 400;
 	color: #FFFFFF;
 	line-height: 0.5;
+	white-space: nowrap;
 }
-
-/*********************************
-5.1 Hero Slider
-*********************************/
-
-
 
 /*********************************
 7. Page Section
@@ -746,109 +742,421 @@ section
 }
 
 /*********************************
-9. Popular
+9. News
 *********************************/
 
-.popular
-{
-
-}
-.course_boxes
-{
-	margin-top: 68px;
-}
-.course_box
-{
-	margin-bottom: 108px;
-}
-.course_box:nth-last-child(-n+3)
-{
-	margin-bottom: 0px;
-}
-.card
-{
-	display: block;
-	background: #f8f9fb;
-	border: none;
-}
-.card-img-top
-{
-	border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-}
-.card-body
-{
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-.card-title
-{
-	margin-top: 55px;
-}
-.card-title a
-{
-	font-size: 22px;
-	font-weight: 500;
-	color: #1a1a1a;
-	line-height: 1.2;
-}
-.card-title a:hover
-{
-	color: #a5a5a5;
-}
-.card-text
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #a5a5a5;
-	margin-top: -12px;
-}
-.price_box
+.news
 {
 	width: 100%;
-	height: 67px;
-	background: #eaebec;
-	margin-top: 41px;
-	padding-left: 35px;
+	padding-top: 103px;
+	padding-bottom: 118px;
 }
-.course_author_image
+.news_post
 {
-	width: 46px;
-	height: 46px;
-	border-radius: 50%;
-	overflow: hidden;
+	
 }
-.course_author_name
+.news_post:last-child
+{
+	/*margin-bottom: 0px;*/
+}
+.news_post_image
+{
+	width: 100%;
+}
+.news_post_image img
+{
+	width: 100%;
+	height: auto;
+}
+.news_post_top
+{
+	margin-top: 38px;
+}
+.news_post_date
+{
+	width: 68px;
+	height: 68px;
+	background: #ffb606;
+}
+.news_post_date div:first-child
+{
+	font-size: 24px;
+	font-weight: 700;
+	color: #FFFFFF;
+	line-height: 1;
+}
+.news_post_date div:last-child
 {
 	font-size: 14px;
 	font-weight: 500;
-	color: #1a1a1a;
-	padding-left: 20px;
-	margin-top: 7px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	line-height: 1;
+	margin-top: 3px;
 }
-.course_author_name span
+.news_post_title_container
+{
+	padding-left: 31px;
+	margin-top: -7px;
+}
+.news_post_title a
+{
+	font-size: 36px;
+	font-weight: 500;
+	line-height: 1.2;
+	color: #1a1a1a;
+}
+.news_post_title a:hover,
+.news_post_author a:hover,
+.news_post_comments a:hover
 {
 	color: #a5a5a5;
 }
-.course_price
+.news_post_meta
 {
-	width: 67px;
-	height: 67px;
-	background: #ffb606;
-	margin-left: auto;
+	color: #1a1a1a;
+	margin-top: 5px;
+	padding-left: 2px;
 }
-.course_price span
+.news_post_author a
 {
-	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 12px;
 	font-weight: 500;
-	margin-top: 7px;
+	color: #1a1a1a;
+	line-height: 1;
+}
+.news_post_comments a
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #1a1a1a;
+	line-height: 1;
+}
+.news_post_meta span:nth-child(2)
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.news_post_text
+{
+	margin-top: 27px;
+}
+.news_post_quote
+{
+	background: #f8f4f4;
+	padding-left: 50px;
+	padding-right: 30px;
+	padding-top: 47px;
+	padding-bottom: 40px;
+	margin-top: 60px;
+}
+.news_post_quote::after
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4px;
+	height: 100%;
+	background: #ffb606;
+	content: '';
+}
+.news_post_quote_text
+{
+	font-size: 18px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 32.08px;
+	margin-bottom: 0px;
+}
+.news_post_quote_text span
+{
+	font-size: 36px;
+	color: #ffb606;
+	margin-right: 2px;
 }
 
 /*********************************
-10. Footer
+9.1 Comments
+*********************************/
+
+.news_post_comments
+{
+	margin-top: 67px;
+}
+.comments_title
+{
+	font-size: 18px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+.comments_list
+{
+	margin-top: 69px;
+}
+.comment
+{
+	margin-bottom: 25px;
+}
+.comment:last-child
+{
+	margin-bottom: 0px;
+}
+.comment_image
+{
+	width: 70px;
+	height: 70px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-top: 13px;
+}
+.comment_image img
+{
+	width: 100%;
+	height: auto;
+}
+.comment_content
+{
+	padding-left: 28px;
+}
+.comment_meta span
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #1a1a1a;
+}
+.comment_name a
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #1a1a1a;
+}
+.comment_name a:hover
+{
+	color: #a5a5a5;
+}
+.comment_separator
+{
+	margin-left: 7px;
+	margin-right: 7px;
+}
+.comment_text
+{
+	margin-top: 10px;
+	padding-left: 2px;
+}
+.comment_reply_link a
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #ffb606;
+}
+.comment_reply_link a:hover
+{
+	color: #1a1a1a;
+}
+
+/*********************************
+9.2 Leave Comment
+*********************************/
+
+.leave_comment
+{
+	margin-top: 51px;
+}
+.leave_comment_title
+{
+	font-size: 18px;
+	font-weight: 700;
+	color: #1a1a1a;
+}
+.leave_comment_form_container
+{
+	margin-top: 77px;
+}
+.input_field
+{
+	width: 100%;
+	background: #f8f4f4;
+	border: solid 2px transparent;
+	margin-bottom: 24px;
+	height: 42px;
+	padding-left: 33px;
+}
+.input_field:focus
+{
+	outline: none !important;
+	border-color: #ffb606;
+}
+.text_field
+{
+	width: 100%;
+	height: 189px;
+	background: #f8f4f4;
+	border: solid 2px transparent;
+	padding-left: 33px;
+	margin-bottom: 24px;
+}
+.text_field:focus
+{
+	outline: none !important;
+	border-color: #ffb606;
+}
+.comment_send_btn
+{
+	width: 100%;
+	height: 48px;
+	background: #ffb606;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	cursor: pointer;
+	border: none;
+}
+.comment_send_btn:focus
+{
+	outline: solid 1px #ffb606;
+	border: green !important;
+}
+
+/*********************************
+10. Sidebar
+*********************************/
+
+.sidebar
+{
+	width: 100%;
+}
+.sidebar_section
+{
+	margin-top: 48px;
+}
+.sidebar_section:first-child
+{
+	margin-top: 0px;
+}
+.sidebar_section_title
+{
+	margin-top: -1px;
+}
+.sidebar_section_title h3
+{
+	color: #1a1a1a;
+	line-height: 1;
+	font-weight: 700;
+}
+.sidebar_list
+{
+	margin-top: 28px;
+}
+.sidebar_list_item
+{
+	padding-top: 13px;
+	padding-bottom: 13px;
+	border-bottom: solid 2px #d2d2d2;
+}
+.sidebar_list_item a
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #a5a5a5;
+}
+.sidebar_list_item a:hover
+{
+	color: #ffb606;
+}
+.latest_posts
+{
+	margin-top: 50px;
+}
+.latest_post
+{
+	margin-bottom: 27px;
+}
+.latest_post:last-child
+{
+	margin-bottom: 0px;
+}
+.latest_post_image
+{
+	width: 100%;
+}
+.latest_post_image img
+{
+	width: 100%;
+	height: auto;
+}
+.latest_post_title
+{
+	margin-top: 24px;
+}
+.latest_post_title a
+{
+	font-size: 18px;
+	font-weight: 500;
+	color: #1a1a1a;
+}
+.latest_post_title a:hover,
+.latest_post_author a:hover,
+.latest_post_comments a:hover
+{
+	color: #a5a5a5;
+}
+.latest_post_meta
+{
+	color: #1a1a1a;
+	margin-top: 6px;
+}
+.latest_post_author a
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #a5a5a5;
+	line-height: 1;
+}
+.latest_post_comments a
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #a5a5a5;
+	line-height: 1;
+}
+.latest_post_meta span:nth-child(2)
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.tags
+{
+	margin-top: 50px;
+}
+.tag
+{
+	height: 40px;
+	background: #ffb606;
+	margin-right: 12px;
+	margin-bottom: 10px;
+}
+.tag a
+{
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/*********************************
+11. Footer
 *********************************/
 
 .footer
@@ -863,7 +1171,7 @@ section
 }
 
 /*********************************
-10.1 Newsletter
+11.1 Newsletter
 *********************************/
 
 .newsletter
@@ -906,7 +1214,7 @@ section
 }
 
 /*********************************
-10.2 Footer Content
+11.2 Footer Content
 *********************************/
 
 .footer_content 
@@ -983,7 +1291,7 @@ section
 }
 
 /*********************************
-10.3 Footer Copyright
+11.3 Footer Copyright
 *********************************/
 
 .footer_bar

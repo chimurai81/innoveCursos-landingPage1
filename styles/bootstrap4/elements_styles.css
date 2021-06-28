@@ -3,11 +3,6 @@
 
 /******************************
 
-COLOR PALETTE
-
-
-
-
 [Table of Contents]
 
 1. Fonts
@@ -22,12 +17,15 @@ COLOR PALETTE
 	4.2 Menu copyright
 5. Home
 7. Page Section
-8. Buttons
-9. Popular
-10. Footer
-	10.1 Newsletter
-	10.2 Footer Content
-	10.3 Footer Copyright
+8. Elements
+	8.1 Buttons
+	8.2 Progress Bars
+	8.3 Accordions
+	8.4 Loaders
+	8.5 Milestones
+	8.6 Icon Boxes
+9. Footer
+	9.1 Footer Copyright
 
 
 ******************************/
@@ -373,7 +371,7 @@ section
 }
 .main_nav_item a:hover
 {
-	color: #FFB606;
+	color: #ffb606;
 }
 
 /*********************************
@@ -440,7 +438,7 @@ section
 	right: -50vw;
 	width: 50vw;
 	height: 100vh;
-	background: #0C2A6B;
+	background: #FFFFFF;
 	z-index: 12;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
@@ -455,7 +453,6 @@ section
 	visibility: visible;
 	opacity: 1;
 	right: 0;
-	background:white;
 }
 .menu
 {
@@ -578,7 +575,11 @@ section
 .menu_social_item
 {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 27px;
+}
+.menu_social_item:last-child
+{
+	margin-right: 0px;
 }
 .menu_social_item a i
 {
@@ -675,13 +676,8 @@ section
 	font-weight: 400;
 	color: #FFFFFF;
 	line-height: 0.5;
+	white-space: nowrap;
 }
-
-/*********************************
-5.1 Hero Slider
-*********************************/
-
-
 
 /*********************************
 7. Page Section
@@ -721,12 +717,38 @@ section
 }
 
 /*********************************
-8. Buttons
+8. Elements
 *********************************/
 
+.elements
+{
+	width: 100%;
+	padding-top: 109px;
+	padding-bottom: 106px;
+}
+.elements_title
+{
+	font-size: 24px;
+	font-weight: 500;
+	color: #1a1a1a;
+}
+
+/*********************************
+8.1 Buttons
+*********************************/
+
+.buttons_container
+{
+	margin-top: 107px;
+}
 .button
 {
-	cursor: pointer;
+	display: inline-block;
+	width: 188px;
+	height: 53px;
+	vertical-align: middle;
+	margin-right: 9px;
+	margin-bottom: 15px;
 }
 .button:hover
 {
@@ -734,127 +756,313 @@ section
 }
 .button a
 {
-	font-size: 14px;
-	line-height: 48px;
+	line-height: 53px;
+	display: block;
+	font-size: 16px;
 	font-weight: 700;
-	text-transform: uppercase;
 }
-.button_1
+.button_color_1
 {
-	width: 202px;
-	height: 48px;
+	background: #ffb606;
+}
+.button_color_1 a
+{
+	color: #FFFFFF;
+}
+.button_color_2
+{
+	background: #1a1a1a;
+}
+.button_color_2 a
+{
+	color: #FFFFFF;
+}
+.button_line_1
+{
+	background: transparent;
+	border: solid 2px #ffb606;
+}
+.button_line_1 a
+{
+	color: #ffb606;
+}
+.button_line_2
+{
+	background: transparent;
+	border: solid 2px #1a1a1a;
+}
+.button_line_2 a
+{
+	color: #1a1a1a;
 }
 
 /*********************************
-9. Popular
+8.2 Progress Bars
 *********************************/
 
-.popular
+.pbars_accordions
 {
+	margin-top: 94px;
+}
+.pbars_accordions_container
+{
+	padding-top: 104px;
+}
+.pbar_container
+{
+	background: #f8f4f4;
+	padding-left: 99px;
+	padding-right: 97px;
+	padding-top: 46px;
+	padding-bottom: 45px;
+}
+.pb_item
+{
+	margin-bottom: 18px;
+}
+.pb_item h4
+{
+	color: #1a1a1a;
+	font-weight: 400 !important;
+	padding-left: 2px;
+	margin-bottom: 13px;
+}
+.skill_bars
+{
+	height: 5px;
+}
 
-}
-.course_boxes
+/*********************************
+8.3 Accordions
+*********************************/
+
+.elements_accordions
 {
-	margin-top: 68px;
+	
 }
-.course_box
+.accordion_container
 {
-	margin-bottom: 108px;
+	margin-bottom: 15px;
 }
-.course_box:nth-last-child(-n+3)
+.accordion
 {
-	margin-bottom: 0px;
+	height: 60px;
+	width: 100%;
+	background: #f8f4f4;
+	padding-left: 30px;
+	cursor: pointer;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
-.card
+.accordion.active
 {
-	display: block;
-	background: #f8f9fb;
-	border: none;
+	background: #ffb606;
+	color: #FFFFFF;
 }
-.card-img-top
+.accordion:active
 {
-	border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+	background: #ffb606 !important;
+	color: #FFFFFF;
 }
-.card-body
+.accordion::after
 {
-	padding-top: 0px;
-	padding-bottom: 0px;
-	padding-left: 15px;
-	padding-right: 15px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 62px;
+	height: 100%;
+	content: '+';
+	background: #ffb606;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 500;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
-.card-title
+.accordion.active::after
 {
-	margin-top: 55px;
+	content: '-';
 }
-.card-title a
+.accordion:hover
+{
+	background: #e4e4e4;
+}
+.accordion_panel
+{
+	padding-left: 30px;
+	padding-right: 30px;
+	max-height: 0;
+	overflow: hidden;
+	-webkit-transition: all 500ms ease;
+	-moz-transition: all 500ms ease;
+	-ms-transition: all 500ms ease;
+	-o-transition: all 500ms ease;
+	transition: all 500ms ease;
+}
+.accordion_panel p
+{
+	padding-top: 15px;
+}
+
+/*********************************
+8.4 Loaders
+*********************************/
+
+.loaders
+{
+	margin-top: 119px;
+}
+.elements_loaders_container
+{
+	margin-top: 60px;
+}
+.loader
+{
+	width: 195px;
+	height: 195px;
+	margin: 0 auto;
+}
+.loader_text
+{
+	font-size: 16px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-top: 26px;
+}
+.loader .progressbar-text
+{
+	top: 50% !important;
+}
+.loader_sub
+{
+	font-size: 15px;
+	font-weight: 400;
+	color: #a5a5a5;
+	margin-top: 5px;
+}
+
+/*********************************
+8.5 Milestones
+*********************************/
+
+.milestones
+{
+	width: 100%;
+	margin-top: 102px;
+}
+.milestones_container
+{
+	width: 100%;
+	padding-top: 118px;
+	padding-bottom: 107px;
+	margin-top: 108px;
+}
+.milestones_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+}
+.milestone_icon img
+{
+	width: 100%;
+}
+.milestone_counter
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #ffb606;
+	line-height: 1;
+	margin-top: 41px;
+}
+.milestone_text
 {
 	font-size: 22px;
 	font-weight: 500;
-	color: #1a1a1a;
-	line-height: 1.2;
-}
-.card-title a:hover
-{
-	color: #a5a5a5;
-}
-.card-text
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #a5a5a5;
-	margin-top: -12px;
-}
-.price_box
-{
-	width: 100%;
-	height: 67px;
-	background: #eaebec;
-	margin-top: 41px;
-	padding-left: 35px;
-}
-.course_author_image
-{
-	width: 46px;
-	height: 46px;
-	border-radius: 50%;
-	overflow: hidden;
-}
-.course_author_name
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #1a1a1a;
-	padding-left: 20px;
-	margin-top: 7px;
-}
-.course_author_name span
-{
-	color: #a5a5a5;
-}
-.course_price
-{
-	width: 67px;
-	height: 67px;
-	background: #ffb606;
-	margin-left: auto;
-}
-.course_price span
-{
 	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: 500;
-	margin-top: 7px;
+	margin-top: 3px;
 }
 
 /*********************************
-10. Footer
+8.6 Icon Boxes
+*********************************/
+
+.icon_boxes
+{
+	margin-top: 112px;
+}
+.icon_boxes_container
+{
+	margin-top: 109px;
+}
+.icon_box
+{
+	
+}
+.icon_box h3
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+	font-weight: 500;
+	color: #1a1a1a;
+	margin-bottom: 13px;
+}
+.icon_box p
+{
+	font-size: 14px;
+	font-weight: 500;
+	color: #a5a5a5;
+	max-width: 100%;
+	margin-bottom: 0px;
+}
+.icon_container
+{
+	height: 41px;
+	width: auto;
+	margin-bottom: 30px;
+}
+.icon_container img
+{
+	height: 100%;
+}
+
+/*********************************
+9. Footer
 *********************************/
 
 .footer
 {
 	width: 100%;
-	padding-top: 86px;
 	background: #1a1a1a;
 }
 .footer .section_title h1
@@ -863,127 +1071,7 @@ section
 }
 
 /*********************************
-10.1 Newsletter
-*********************************/
-
-.newsletter
-{
-	padding-bottom: 85px;
-	border-bottom: solid 2px #4d4e4e;
-}
-.newsletter_form_container
-{
-	width: 60%;
-	margin-top: 48px;
-}
-.newsletter_email
-{
-	width: calc(100% - 164px);
-	height: 42px;
-	border: none;
-	padding-left: 27px;
-	font-weight: 500;
-	color: #1a1a1a;
-}
-.newsletter_email:focus
-{
-	outline: solid 2px #ffb606;
-}
-.newsletter_submit_btn
-{
-	width: 164px;
-	height: 42px;
-	border: none;
-	background: #ffb606;
-	color: #FFFFFF;
-	font-size: 14px;
-	font-weight: 500;
-	cursor: pointer;
-}
-.newsletter_submit_btn:focus
-{
-	border: solid 2px #FFFFFF;
-}
-
-/*********************************
-10.2 Footer Content
-*********************************/
-
-.footer_content 
-{
-	padding-top: 80px;
-	padding-bottom: 83px;
-	border-bottom: solid 2px #4d4e4e;
-}
-.footer_content .logo_container
-{
-	padding-left: 0px;
-}
-.footer_content .logo span
-{
-	color: #FFFFFF;
-}
-.footer_about_text
-{
-	margin-top: 24px;
-	margin-bottom: 0px;
-	padding-right: 20px;
-}
-.footer_column_title
-{
-	font-size: 18px;
-	font-weight: 500;
-	color: #FFFFFF;
-	padding-top: 15px;
-}
-.footer_column_content
-{
-	margin-top: 32px;
-}
-.footer_list_item
-{
-	margin-bottom: 11px;
-}
-.footer_list_item a
-{
-	font-size: 14px;
-	color: #a5a5a5;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.footer_list_item a:hover
-{
-	color: #ffb606;
-}
-.footer_contact_item
-{
-	font-size: 14px;
-	font-weight: 400;
-	color: #a5a5a5;
-	margin-bottom: 22px;
-}
-.footer_contact_item:last-child
-{
-	margin-bottom: 0px;
-}
-.footer_contact_icon
-{
-	display: inline-block;
-	width: 24px;
-	height: 24px;
-	vertical-align: middle;
-	margin-right: 10px;
-}
-.footer_contact_icon img
-{
-	width: 100%;
-}
-
-/*********************************
-10.3 Footer Copyright
+9.1 Footer Copyright
 *********************************/
 
 .footer_bar

@@ -23,11 +23,13 @@ COLOR PALETTE
 5. Home
 7. Page Section
 8. Buttons
-9. Popular
-10. Footer
-	10.1 Newsletter
-	10.2 Footer Content
-	10.3 Footer Copyright
+9. Teachers
+10. Milestones
+11. Become
+12. Footer
+	12.1 Newsletter
+	12.2 Footer Content
+	12.3 Footer Copyright
 
 
 ******************************/
@@ -281,7 +283,7 @@ section
 	transform: translateX(-50%);
 	width: 1318px;
 	height: 104px;
-	background: #0C2A6B;
+	background: #FFFFFF;
 	z-index: 10;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -364,7 +366,7 @@ section
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #FFFFFF;
+	color: #3a3a3a;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -373,7 +375,7 @@ section
 }
 .main_nav_item a:hover
 {
-	color: #FFB606;
+	color: #ffb606;
 }
 
 /*********************************
@@ -440,7 +442,7 @@ section
 	right: -50vw;
 	width: 50vw;
 	height: 100vh;
-	background: #0C2A6B;
+	background: #FFFFFF;
 	z-index: 12;
 	-webkit-transition: all 0.6s ease;
 	-moz-transition: all 0.6s ease;
@@ -455,7 +457,6 @@ section
 	visibility: visible;
 	opacity: 1;
 	right: 0;
-	background:white;
 }
 .menu
 {
@@ -578,7 +579,11 @@ section
 .menu_social_item
 {
 	display: inline-block;
-	margin-right: 30px;
+	margin-right: 27px;
+}
+.menu_social_item:last-child
+{
+	margin-right: 0px;
 }
 .menu_social_item a i
 {
@@ -678,12 +683,6 @@ section
 }
 
 /*********************************
-5.1 Hero Slider
-*********************************/
-
-
-
-/*********************************
 7. Page Section
 *********************************/
 
@@ -746,40 +745,75 @@ section
 }
 
 /*********************************
-9. Popular
+9. Teachers
 *********************************/
 
-.popular
+.teacher
 {
-
+	margin-bottom: 82px;
 }
-.course_boxes
-{
-	margin-top: 68px;
-}
-.course_box
-{
-	margin-bottom: 108px;
-}
-.course_box:nth-last-child(-n+3)
+.teacher:nth-last-child(-n+3)
 {
 	margin-bottom: 0px;
 }
 .card
 {
 	display: block;
-	background: #f8f9fb;
 	border: none;
+	background: #f8f9fb;
+}
+.card:hover .card-img-top
+{
+	opacity: 0.6;
+}
+.card:hover .card_plus
+{
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: translate(-50%, -50%) scale(1);
+	-moz-transform: translate(-50%, -50%) scale(1);
+	-ms-transform: translate(-50%, -50%) scale(1);
+	-o-transform: translate(-50%, -50%) scale(1);
+	transform: translate(-50%, -50%) scale(1);
+}
+.card_img
+{
+	background: #1a1a1a;
 }
 .card-img-top
 {
 	border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
+.card_plus
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%) scale(0.5);
+	-moz-transform: translate(-50%, -50%) scale(0.5);
+	-ms-transform: translate(-50%, -50%) scale(0.5);
+	-o-transform: translate(-50%, -50%) scale(0.5);
+	transform: translate(-50%, -50%) scale(0.5);
+	width: 75px;
+	height: 75px;
+	background: #ffb606;
+	z-index: 10;
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+}
+.card_plus a
+{
+	display: block;
+	font-size: 24px;
+	line-height: 75px;
+	color: #FFFFFF;
+}
 .card-body
 {
 	padding-top: 0px;
-	padding-bottom: 0px;
+	padding-bottom: 58px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -803,52 +837,131 @@ section
 	font-size: 14px;
 	font-weight: 500;
 	color: #a5a5a5;
-	margin-top: -12px;
+	margin-top: -7px;
 }
-.price_box
+.teacher_social
 {
-	width: 100%;
-	height: 67px;
-	background: #eaebec;
-	margin-top: 41px;
-	padding-left: 35px;
-}
-.course_author_image
-{
-	width: 46px;
-	height: 46px;
-	border-radius: 50%;
-	overflow: hidden;
-}
-.course_author_name
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #1a1a1a;
-	padding-left: 20px;
-	margin-top: 7px;
-}
-.course_author_name span
-{
-	color: #a5a5a5;
-}
-.course_price
-{
-	width: 67px;
-	height: 67px;
-	background: #ffb606;
-	margin-left: auto;
-}
-.course_price span
-{
-	color: #FFFFFF;
-	font-size: 18px;
-	font-weight: 500;
-	margin-top: 7px;
+	margin-top: 34px;
 }
 
 /*********************************
-10. Footer
+10. Milestones
+*********************************/
+
+.milestones
+{
+	width: 100%;
+	padding-top: 118px;
+	padding-bottom: 107px;
+}
+.milestones_background
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+.milestone
+{
+	width: 100%;
+}
+.milestone_icon
+{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+}
+.milestone_icon img
+{
+	width: 100%;
+}
+.milestone_counter
+{
+	font-size: 36px;
+	font-weight: 500;
+	color: #ffb606;
+	line-height: 1;
+	margin-top: 41px;
+}
+.milestone_text
+{
+	font-size: 22px;
+	font-weight: 500;
+	color: #FFFFFF;
+	margin-top: 3px;
+}
+
+/*********************************
+11. Become
+*********************************/
+
+.become
+{
+	width: 100%;
+	padding-top: 117px;
+	padding-bottom: 117px;
+}
+.become_title h1
+{
+	display: block;
+	color: #1a1a1a;
+	font-weight: 500;
+	padding-top: 24px;
+}
+.become_title h1::before
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 55px;
+	height: 4px;
+	content: '';
+	background: #ffb606;
+}
+.become_text
+{
+	font-weight: 500;
+	color: #a5a5a1;
+	margin-top: 48px;
+	margin-bottom: 0px;
+}
+.become_button
+{
+	width: 188px;
+	height: 53px;
+	background: #ffb606;
+	margin-top: 37px;
+}
+.become_button a
+{
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #FFFFFF;
+	line-height: 53px;
+}
+.become_button:hover
+{
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+.become_image
+{
+	width: 100%;
+	margin-top: 85px;
+}
+.become_image img
+{
+	width: 100%;
+}
+
+/*********************************
+12. Footer
 *********************************/
 
 .footer
@@ -863,7 +976,7 @@ section
 }
 
 /*********************************
-10.1 Newsletter
+12.1 Newsletter
 *********************************/
 
 .newsletter
@@ -906,7 +1019,7 @@ section
 }
 
 /*********************************
-10.2 Footer Content
+12.2 Footer Content
 *********************************/
 
 .footer_content 
@@ -983,7 +1096,7 @@ section
 }
 
 /*********************************
-10.3 Footer Copyright
+12.3 Footer Copyright
 *********************************/
 
 .footer_bar

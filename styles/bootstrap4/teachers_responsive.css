@@ -94,6 +94,10 @@
 	{
 		padding-right: 53px;
 	}
+	.card-title
+	{
+		font-size: 20px;
+	}
 }
 
 /************
@@ -144,9 +148,13 @@
 	{
 		display: block;
 	}
-	.elements_accordions
+	.teacher:nth-last-child(-n+3)
 	{
-		margin-top: 80px;
+		margin-bottom: 80px;
+	}
+	.teacher:last-child
+	{
+		margin-bottom: 0px !important;
 	}
 	.milestone_col
 	{
@@ -156,13 +164,10 @@
 	{
 		margin-bottom: 0px;
 	}
-	.icon_box
+	.become_image
 	{
-		margin-bottom: 60px;
-	}
-	.icon_box:last-child
-	{
-		margin-bottom: 0px;
+		margin-top: 0px;
+		margin-bottom: 67px;
 	}
 	.newsletter_form_container
 	{
@@ -216,7 +221,6 @@
 		right: -100vw;
 		width: 100vw;
 		height: 100vh;
-		background-color: #FFFFFF;
 	}
 	.newsletter_email
 	{
@@ -296,74 +300,17 @@
 	{
 		font-size: 30px;
 	}
-	.pbar_container
+	.card-title
 	{
-		padding-left: 25px;
-		padding-right: 25px;
+		margin-top: 30px;
 	}
-	.loader_col
-	{
-		margin-bottom: 60px;
-	}
-	.loader_col:last-child
-	{
-		margin-bottom: 0px;
-	}
-	.loader
-	{
-		width: 120px;
-		height: 120px;
-	}
-	.pb_item h4
-	{
-		margin-bottom: 7px;
-	}
-	.progressbar-text
-	{
-		top: -27px !important;
-		font-size: 14px !important;
-	}
-	.accordion
-	{
-		font-size: 13px;
-		padding-left: 20px;
-		padding-right: 50px;
-	}
-	.loader_text
-	{
-		font-size: 14px;
-		margin-top: 15px;
-	}
-	.loader_sub
-	{
-		font-size: 13px;
-		margin-top: 2px;
-	}
-	.milestone_col
-	{
-		margin-bottom: 60px;
-	}
-	.milestone_icon
-	{
-		width: 50px;
-		height: 50px;
-	}
-	.milestone_counter
-	{
-		font-size: 30px;
-		margin-top: 25px;
-	}
-	.milestone_text
-	{
-		font-size: 16px;
-	}
-	.icon_box p
-	{
-		font-size: 13px;
-	}
-	.icon_box h3
+	.card-title a
 	{
 		font-size: 20px;
+	}
+	.card-text
+	{
+		font-size: 13px;
 	}
 	.footer_bar
 	{
