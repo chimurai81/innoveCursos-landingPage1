@@ -13,8 +13,38 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="styles/whats.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ <link rel="stylesheet" type="text/css" href="styles/whats2.css">
 </head>
 <body>
+<!--boton dinamico whatsapp-->
+<div class="nav-bottom">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+	 <div class="popup-whatsapp fadeIn">
+		 <div class="content-whatsapp -top"><button type="button" class="closePopup">
+			   <i class="material-icons icon-font-color">close</i>
+			 </button> 
+		   
+			<p>  <img src="images/antoniaWhatsAppDinamico.jpg" width="50">  Hola, ¿en que podemos ayudarle? </p>
+			
+		 </div>
+		 <div class="content-whatsapp -bottom">
+		   <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+			
+			 <button class="send-msPopup" id="send-btn" type="button">
+				 <i class="material-icons icon-font-color--black">send</i>
+			 </button>
+
+		 </div>
+	 </div>
+	 <button type="button" id="whats-openPopup" class="whatsapp-button">
+		 <div class="float" >
+<i class="fa fa-whatsapp my-float"></i></div>
+	 </button>
+	 <div class="circle-anime"></div>
+ </div>
 
 <div class="super_container">
 
@@ -42,7 +72,7 @@
 				</div>
 			</nav>
 		</div>
-		<div class="header_side d-flex flex-row justify-content-center align-items-center">
+		<div id='whatsappdirection' class="header_side d-flex flex-row justify-content-center align-items-center">
 			<img src="images/phone-call.svg" alt="">
 			<span>0983 367419</span>
 		</div>
@@ -150,32 +180,32 @@
 			<div class="container">
 				<div class="row">
 				
-					<div  class="col-lg-4 hero_box_col">
+					<div id="divInicio1" class="col-lg-4 hero_box_col">
 						<div   class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/earth-globe.svg" class="svg" alt="">
-							<div class="hero_box_content">
+							<div  class="hero_box_content">
 								<h2  class="hero_box_title">Cursos más Frecuentes</h2>
-								<a href="cursos.html"></a>
+								
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
+					<div id='divInicio2' class="col-lg-4 hero_box_col">
+						<div  class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/books.svg" class="svg" alt="">
 							<div class="hero_box_content">
 								<h2 class="hero_box_title">Cursos Disponibles</h2>
-								<a href="courses.html" class="hero_box_link">ver mas</a>
+							
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-4 hero_box_col">
+					<div id="divInicio3" class="col-lg-4 hero_box_col">
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/professor.svg" class="svg" alt="">
 							<div class="hero_box_content">
 								<h2 class="hero_box_title">Instructores</h2>
-								<a href="instructores.html" class="hero_box_link">ver mas</a>
+							
 							</div>
 						</div>
 					</div>
@@ -561,6 +591,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 <script src="plugins/scrollTo/jquery.scrollTo.min.js"></script>
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
+<script  src="js/script2.js"></script>
+<script src="js/envioADirections.js"></script>
 
 </body>
 </html>
